@@ -25,7 +25,7 @@ function isValid(userEmail) {
 
 //Live email validation
 email.addEventListener('input', function () {
-    const email = this.value;
+    email = this.value;
     isValid(email);
 });
 
@@ -35,12 +35,13 @@ form.addEventListener('submit', function (e) {
 
     const emailInput = email.value.trim();
 
-    console.log(isValid(emailInput) ? "Valid email address" : "Invalid email address");
-
     const validate = isValid(emailInput);
+
+    console.log(validate ? "Valid email address" : "Invalid email address");
 
     if (validate === true) {
         success.classList.toggle("hidden");
+        success.focus();
         sign_up.classList.toggle("hidden");
         user.textContent = emailInput;
     }
