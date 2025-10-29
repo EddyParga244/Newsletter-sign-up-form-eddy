@@ -4,13 +4,13 @@ const success = document.getElementById("success");
 const dismiss = document.getElementById("dismiss");
 const sign_up = document.getElementById("sign-up");
 const user = document.getElementById("user");
+const label_error = document.getElementById("label-error");
+const email_error = document.getElementById("email");
+const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 // Validate email
-function isValid(email) {
-    const label_error = document.getElementById("label-error");
-    const email_error = document.getElementById("email");
-    const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const valid = pattern.test(email);
+function isValid(userEmail) {
+    const valid = pattern.test(userEmail);
 
     if (valid) {
         label_error.classList.add("hidden");
@@ -37,7 +37,7 @@ form.addEventListener('submit', function (e) {
 
     console.log(isValid(emailInput) ? "Valid email address" : "Invalid email address");
 
-    let validate = isValid(emailInput);
+    const validate = isValid(emailInput);
 
     if (validate === true) {
         success.classList.toggle("hidden");
