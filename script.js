@@ -25,8 +25,8 @@ function isValid(userEmail) {
 
 //Live email validation
 email.addEventListener('input', function () {
-    email = this.value;
-    isValid(email);
+    const emailValue = this.value;
+    isValid(emailValue); 
 });
 
 //Submit form
