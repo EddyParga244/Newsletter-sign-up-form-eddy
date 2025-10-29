@@ -21,7 +21,7 @@
       <picture class="images">
         <source media="(min-width: 64rem)" srcset="./assets/images/illustration-sign-up-desktop.svg">
         <source media="(min-width: 26.625rem)" srcset="./assets/images/illustration-sign-up-tablet.svg">
-        <img src="./assets/images/illustration-sign-up-mobile.svg" alt="">
+        <img src="./assets/images/illustration-sign-up-mobile.svg" alt="Illustration of a person signing up on a form">
       </picture>
 
       <div class="text-content">
@@ -40,7 +40,8 @@
         <label for="email" class="email">Email address</label><span id="label-error" class="label-error hidden"
           role="alert" aria-live="polite" aria-atomic="true">Valid email
           required</span>
-        <input type="email" id="email" name="email" class="input-email" placeholder="email@company.com" required aria-describedby="label-error">
+        <input type="email" id="email" name="email" class="input-email" placeholder="email@company.com" required
+          aria-describedby="label-error">
         <button class="button" type="submit">Subscribe to monthly newsletter</button>
       </form>
     </section>
@@ -48,7 +49,8 @@
 
     <!-- Success message start -->
 
-    <section id="success" class="success hidden" tabindex="-1" aria-live="polite">
+    <section id="success" class="success hidden" tabindex="-1" role="region" aria-label="Subscription success message"
+      aria-live="polite">
       <img class="check" src="./assets/images/icon-success.svg" alt="">
 
       <h3 class="title">Thanks for subscribing!</h3>
@@ -57,7 +59,7 @@
         A confirmation email has been sent to <span id="user" class="user"></span>.
         Please open it and click the button inside to confirm your subscription.
       </p>
-      <button id="dismiss" class="button" type="button">Dismiss message</button>
+      <button id="dismiss" class="button dismiss" type="button">Dismiss message</button>
     </section>
 
     <!-- Success message end -->

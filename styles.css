@@ -179,7 +179,7 @@ body {
 }
 
 .check,
-#dismiss {
+.dismiss {
   margin-top: 5rem;
 }
 
@@ -229,7 +229,7 @@ body {
   }
 
   .check,
-  #dismiss {
+  .dismiss {
     margin-top: 2rem;
   }
 
