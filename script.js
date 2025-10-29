@@ -39,14 +39,14 @@ form.addEventListener('submit', function (e) {
     console.log(validate ? "Valid email address" : "Invalid email address");
 
     if (validate === true) {
-        success.classList.toggle("hidden");
-        sign_up.classList.toggle("hidden");
+        success.classList.toggle("hidden", false);
+        sign_up.classList.toggle("hidden", true);
         user.textContent = emailInput;
     }
 });
 
 //Dismiss validation message
 dismiss.addEventListener('click', function () {
-    success.classList.toggle("hidden");
-    sign_up.classList.toggle("hidden");
+    success.classList.add("hidden");
+    sign_up.classList.remove("hidden");
 });
