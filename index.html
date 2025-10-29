@@ -37,9 +37,10 @@
       </section>
 
       <form novalidate id="form" class="form-content">
-        <label for="email" class="email">Email address</label><span id="label-error" class= "label-error hidden">Valid email
+        <label for="email" class="email">Email address</label><span id="label-error" class="label-error hidden"
+          role="alert" aria-live="polite" aria-atomic="true">Valid email
           required</span>
-        <input type="email" id="email" name="email" class="input-email" placeholder="email@company.com" required>
+        <input type="email" id="email" name="email" class="input-email" placeholder="email@company.com" required aria-describedby="label-error">
         <button class="button" type="submit">Subscribe to monthly newsletter</button>
       </form>
     </section>
@@ -47,7 +48,7 @@
 
     <!-- Success message start -->
 
-    <section id="success" class="success hidden">
+    <section id="success" class="success hidden" tabindex="-1" aria-live="polite">
       <img class="check" src="./assets/images/icon-success.svg" alt="">
 
       <h3 class="title">Thanks for subscribing!</h3>
